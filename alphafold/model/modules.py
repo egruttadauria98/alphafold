@@ -32,6 +32,10 @@ import jax
 import jax.numpy as jnp
 
 
+def useless_function():
+  return "I am an useless function, delete me after debugging"
+
+
 def softmax_cross_entropy(logits, labels):
   """Computes softmax cross entropy given logits and one-hot class labels."""
   loss = -jnp.sum(labels * jax.nn.log_softmax(logits), axis=-1)
